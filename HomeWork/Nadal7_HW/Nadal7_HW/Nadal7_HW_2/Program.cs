@@ -1,180 +1,196 @@
-﻿using System;
-
-namespace Nadal7_HW_2
+﻿﻿public interface IIroningMachine
 {
-    enum ProgramType
+    void Descale();
+    void DoIroning(int temperature);
+    void DoIroning(string program);
+    void UseSteam();
+    void TurnOn();
+    void TurnOff();
+}
+public class IroningMachine : IIroningMachine
+{
+    protected int usageCounter;
+    protected bool steamUsed;
+    protected bool steamIndicatorLight;
+    protected bool isOn;
+
+    public IroningMachine()
     {
-        Linen,
-        Cotton,
-        Silk,
-        Synthetics
+        usageCounter = 0;
+        steamUsed = false;
+        steamIndicatorLight = false;
+        isOn = false;
     }
 
-    class Program
+    public virtual void Descale()
     {
-        static void Main(string[] args)
-        {
-            RegularIron MyRegularIron = new RegularIron();
-            PremiumIron MyPremiumIron = new PremiumIron();
-            LinenIron MyLinenIron = new LinenIron();
-            MyRegularIron.UseSteam();
-            MyRegularIron.DoIroning(170);
-            MyRegularIron.DoIroning(160);
-            MyRegularIron.Clean();
-
-            MyPremiumIron.UseSteam();
-            MyPremiumIron.DoIroning(ProgramType.Cotton);
-            MyPremiumIron.DoIroning(ProgramType.Silk);
-            MyPremiumIron.Clean();
-
-            MyLinenIron.UseSteam();
-            MyLinenIron.DoIroning(ProgramType.Linen);
-            MyLinenIron.DoIroning(ProgramType.Cotton);
-            MyLinenIron.Clean();
-        }
+        usageCounter = 0;
+        Console.WriteLine("Triikraud on puhastatud.");
     }
 
-    class RegularIron
+    public virtual void DoIroning(int temperature)
     {
-        private int usageCount;
-        private bool isSteamUsed;
-
-        public string Descale()
+        if (!isOn)
         {
-            usageCount = 0;
-            return "Machine is cleaned.";
+            Console.WriteLine("Lülitage triikraud ennem tööle.");
+            return;
         }
 
-        public string DoIroning(int temperature)
+        if (steamUsed)
         {
-            usageCount++;
-            if (usageCount >= 3)
-            {
-                return Descale();
-            }
-            if (isSteamUsed)
-            {
-                isSteamUsed = false;
-                return $"Regular machine is ironing with {temperature} degrees without steam.";
-            }
-            return $"Regular machine is ironing with {temperature} degrees.";
+            Console.WriteLine("Triikimine auruga");
+            steamUsed = false;
         }
 
-        public void UseSteam()
+        Console.WriteLine($"Triikimine {temperature} kraadiga.");
+        usageCounter++;
+        if (usageCounter == 3)
         {
-            isSteamUsed = true;
-            Console.WriteLine("Steam used in regular iron.");
-        }
-
-        public void Clean()
-        {
-            Console.WriteLine(Descale());
-        }
-
-        public string TurnOn()
-        {
-            return "Regular iron turned on.";
-        }
-
-        public string TurnOff()
-        {
-            return "Regular iron turned off.";
+            Descale();
         }
     }
 
-    class PremiumIron
+    public virtual void DoIroning(string program)
     {
-        private int usageCount;
-        private bool isSteamUsed;
+        int minTemperature = 0;
+        int maxTemperature = 0;
 
-        public string Descale()
+        switch (program.ToLower())
         {
-            usageCount = 0;
-            return "Machine is cleaned.";
+            case "linen":
+                minTemperature = 200;
+                maxTemperature = 230;
+                break;
+            case "cotton":
+                minTemperature = 150;
+                maxTemperature = 199;
+                break;
+            case "silk":
+                minTemperature = 120;
+                maxTemperature = 149;
+                break;
+            case "synthetics":
+                minTemperature = 90;
+                maxTemperature = 119;
+                break;
+            default:
+                Console.WriteLine($"Tundmatu programm: {program}");
+                return;
         }
 
-        public string DoIroning(ProgramType programType)
+        Random rnd = new Random();
+        int randomTemperature = rnd.Next(minTemperature, maxTemperature + 1);
+
+        DoIroning(randomTemperature);
+    }
+
+    public virtual void UseSteam()
+    {
+        if (isOn)
         {
-            usageCount++;
-            if (usageCount >= 3)
+            if (steamUsed)
             {
-                return Descale();
+                Console.WriteLine("Auru funktsioon on juba sees.");
             }
-            if (isSteamUsed)
+            else
             {
-                isSteamUsed = false;
-                return $"Premium machine is ironing with {programType} program without steam.";
+                if (usageCounter > 0)
+                {
+                    steamUsed = true;
+                    usageCounter++; 
+                    if (usageCounter == 2)
+                    {
+                        steamIndicatorLight = true;
+                        Console.WriteLine("Vee indikaator hakkas põlema. Palun lisage vett.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Ei saa kasutada auru enne triikimist.");
+                }
             }
-            return $"Premium machine is ironing with {programType} program.";
         }
-
-        public void UseSteam()
+        else
         {
-            isSteamUsed = true;
-            Console.WriteLine("Steam used in premium iron.");
-        }
-
-        public void Clean()
-        {
-            Console.WriteLine(Descale());
-        }
-
-        public string TurnOn()
-        {
-            return "Premium iron turned on.";
-        }
-
-        public string TurnOff()
-        {
-            return "Premium iron turned off.";
+            Console.WriteLine("Pane triikraud ennem tööle.");
         }
     }
 
-    class LinenIron
+    public virtual void TurnOn()
     {
-        private int usageCount;
-        private bool isSteamUsed;
+        isOn = true;
+        Console.WriteLine("Triikraud on sisse lülitatud.");
+    }
 
-        public string Descale()
-        {
-            usageCount = 0;
-            return "Machine is cleaned.";
-        }
+    public virtual void TurnOff()
+    {
+        isOn = false;
+        Console.WriteLine("Triikraud on välja lülitatud.");
+    }
+}
 
-        public string DoIroning(ProgramType programType)
-        {
-            usageCount++;
-            if (usageCount >= 3)
-            {
-                return Descale();
-            }
-            if (isSteamUsed)
-            {
-                isSteamUsed = false;
-                return $"Linen machine is ironing with {programType} program without steam.";
-            }
-            return $"Linen machine is ironing with {programType} program.";
-        }
+public class RegularIron : IroningMachine
+{
+    public override void Descale()
+    {
+        base.Descale();
+        Console.WriteLine("Triikraud on kasutatud 3 korda, puhastus on kohustuslik.");
+    }
+}
 
-        public void UseSteam()
-        {
-            isSteamUsed = true;
-            Console.WriteLine("Steam used in linen iron.");
-        }
+public class PremiumIron : IroningMachine
+{
+    public override void Descale()
+    {
+        base.Descale();
+        Console.WriteLine("Triikraud on kasutatud 3 korda, puhastus on kohustuslik.");
+    }
 
-        public void Clean()
+    public override void DoIroning(int temperature)
+    {
+        base.DoIroning(temperature);
+        if (usageCounter == 3)
         {
-            Console.WriteLine(Descale());
+            Descale();
         }
+    }
+}
+public class LinenIron : IroningMachine
+{
+    public override void DoIroning(int temperature)
+    {
+        base.DoIroning(temperature);
+        if (temperature >= 120)
+        {
+            steamUsed = true;
+            Console.WriteLine("Triikimine auruga");
+        }
+    }
+}
+public class IroningProgram
+{
+    public static void Main(string[] args)
+    {
+        RegularIron regularIron = new RegularIron();
+        PremiumIron premiumIron = new PremiumIron();
+        LinenIron linenIron = new LinenIron();
 
-        public string TurnOn()
-        {
-            return "Linen iron turned on.";
-        }
+        regularIron.TurnOn();
+        regularIron.DoIroning("puuvill");
+        regularIron.UseSteam();
+        regularIron.DoIroning("siid");
 
-        public string TurnOff()
-        {
-            return "Linen iron turned off.";
-        }
+        premiumIron.TurnOn();
+        premiumIron.DoIroning(180);
+        premiumIron.DoIroning("puuvill");
+        premiumIron.UseSteam();
+        premiumIron.UseSteam();
+        premiumIron.DoIroning("sünteetika");
+
+        linenIron.TurnOn();
+        linenIron.DoIroning("lina");
+        linenIron.DoIroning(210);
+        linenIron.DoIroning(220);
+        linenIron.UseSteam();
     }
 }
