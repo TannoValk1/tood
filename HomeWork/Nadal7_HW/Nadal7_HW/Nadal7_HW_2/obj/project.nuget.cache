@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FLvo8Y6HdqyVwGy0dhwZ983EFo0CvieQ7JRQir2UXdXi5Hd6FX4Oa1vdIiccY2yREdlOcxVbESVrB7iq9gyvEQ==",
+  "dgSpecHash": "R9s9gb6sKZug9qPbroxOTr3ooLiTAKPw4L1MXd7q9UqafuEwoDuNRFS/mvUH2w+bDm9YdBRrzM42TuoOiSvBmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
+  "projectFilePath": "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tanno\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
     "C:\\Users\\tanno\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",

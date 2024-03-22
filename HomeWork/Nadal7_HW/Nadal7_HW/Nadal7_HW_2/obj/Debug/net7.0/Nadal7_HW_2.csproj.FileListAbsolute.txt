@@ -1,0 +1,15 @@
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\bin\Debug\net7.0\Nadal7_HW_2.exe
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\bin\Debug\net7.0\Nadal7_HW_2.deps.json
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\bin\Debug\net7.0\Nadal7_HW_2.runtimeconfig.json
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\bin\Debug\net7.0\Nadal7_HW_2.dll
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\bin\Debug\net7.0\Nadal7_HW_2.pdb
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.AssemblyInfoInputs.cache
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.AssemblyInfo.cs
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.csproj.CoreCompileInputs.cache
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.sourcelink.json
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.dll
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\refint\Nadal7_HW_2.dll
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.pdb
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\Nadal7_HW_2.genruntimeconfig.cache
+c:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\obj\Debug\net7.0\ref\Nadal7_HW_2.dll

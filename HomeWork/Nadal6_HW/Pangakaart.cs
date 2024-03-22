@@ -1,47 +1,84 @@
 ﻿using System;
 
-public class Pangakaart
+public class BankCard
 {
-    private double kontoSaldo;
-    private string kaardiTüüp;
-    private string kaardiNumber;
-
-    public Pangakaart()
+    static void Main(string[] args)
     {
-        kontoSaldo = 0;
-        kaardiTüüp = "Visa";
+        BankCard card1 = new BankCard();
+        BankCard card2 = new BankCard(100, "Maestro");
+
+        card1.SetCardNumber("12345678");
+        card2.SetCardNumber("123");
+
+        card1.AddMoney(50);
+        card1.PrintAccountBalance();
+
+        card1.SubtractMoney(30);
+        card1.PrintAccountBalance();
+        card1.SubtractMoney(60);
+
+        card1.PrintCardType();
+        card2.PrintCardType();
     }
 
-    public void MääraKaardiNumber(string number)
+    private double Kontojääk;
+    private string Kaarditüüp;
+    private string Kaardinumber;
+
+    public BankCard()
+    {
+        Kontojääk = 0;
+        Kaarditüüp = "Visa";
+    }
+
+    public BankCard(double balance, string type)
+    {
+        Kontojääk = balance;
+        Kaarditüüp = type;
+    }
+
+    public void SetCardNumber(string number)
     {
         if (number.Length != 8)
-            Console.WriteLine("Vigane kaardi number!");
+        {
+            Console.WriteLine("Vale number sisestatud! Kaardil peab olema 8 numbrit!");
+        }
         else
         {
-            kaardiNumber = number;
-            Console.WriteLine("Kaardi number : " + kaardiNumber);
+            Kaardinumber = number;
+            Console.WriteLine($"Kaardi number {Kaardinumber} sisestatud edukalt.");
         }
     }
 
-    public void PrindiKontoSaldo()
+    public void PrintCardType()
     {
-        Console.WriteLine("Konto väärtus: " + kontoSaldo);
+        Console.WriteLine($"Kaarditüüp: {Kaarditüüp}");
     }
 
-    public void LisaRaha(double summa)
+    public void PrintAccountBalance()
     {
-        kontoSaldo += summa;
-        Console.WriteLine("Lisatud " + summa + " eurot kontole. Uus konto väärtus: " + kontoSaldo);
+        Console.WriteLine($"Kontojääk: {GetAccountBalance()}");
     }
 
-    public void VõtaRaha(double summa)
+    public double GetAccountBalance()
     {
-        if (kontoSaldo - summa < 0)
-            Console.WriteLine("Raha pole piisavalt");
+        return Kontojääk;
+    }
+
+    public void AddMoney(double amount)
+    {
+        Kontojääk += amount;
+    }
+
+    public void SubtractMoney(double amount)
+    {
+        if (Kontojääk - amount < 0)
+        {
+            Console.WriteLine("Ei saa teostada makset, pole piisavalt vahendeid");
+        }
         else
         {
-            kontoSaldo -= summa;
-            Console.WriteLine("Võetud " + summa + " eurot kontolt. Uus konto vääruts: " + kontoSaldo);
+            Kontojääk -= amount;
         }
     }
 }

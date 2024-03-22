@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj": {}
+    "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj": {
+    "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
+        "projectUniqueName": "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
         "projectName": "Nadal7_HW_2",
-        "projectPath": "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
+        "projectPath": "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\Nadal7_HW_2.csproj",
         "packagesPath": "C:\\Users\\tanno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\obj\\",
+        "outputPath": "c:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tanno\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,46 +1,65 @@
 ﻿using System;
 
-public class Ring {
-    private double _raadius;
-    private double _läbimõõt;
+internal class Circle
+{
+    private double _radius;
+    private double _diameter;
 
-    public Ring() {
-        _raadius = 0;
-        _läbimõõt = 0;
+    static void Main(string[] args)
+    {
+        Circle circle1 = new Circle();
+        circle1.PrintInfo();
+
+        circle1.SetRadius(5);
+
+        circle1.CalculateArea();
+
+        Circle circle2 = new Circle(3);
+        circle2.PrintInfo();
+
+        circle2.CalculateCircumference();
     }
 
-    public Ring(double raadius) {
-        _raadius = raadius;
-        _läbimõõt = raadius * 2;
+    public Circle()
+    {
+        _radius = 0;
+        _diameter = 0;
     }
 
-    public void PrindiInfo() {
-        if (_raadius == 0 || _läbimõõt == 0) {
-            Console.WriteLine("ring moodud pole sisestatud!");
-        } else {
-            Console.WriteLine($"ringi raadius: {_raadius}läbimõõt:{_läbimõõt}");
+    public Circle(double radius)
+    {
+        _radius = radius;
+        _diameter = radius * 2;
+    }
+
+    public void PrintInfo()
+    {
+        if (_radius == 0 && _diameter == 0)
+        {
+            Console.WriteLine("Väärtused pole sisestatud!");
+        }
+        else
+        {
+            Console.WriteLine($"Ringi raadius on {_radius} ja diameeter on {_diameter}");
         }
     }
 
-    public void MääraRaadius(double raadius) {
-        _raadius = raadius;
-        _läbimõõt = raadius * 2;
-        PrindiInfo();
+    public void SetRadius(double radius)
+    {
+        _radius = radius;
+        _diameter = radius * 2;
+        PrintInfo();
     }
 
-    public void MääraLäbimõõt(double läbimõõt) {
-        _raadius = läbimõõt / 2;
-        _läbimõõt = läbimõõt;
-        PrindiInfo();
+    public void CalculateArea()
+    {
+        double area = Math.PI * Math.Pow(_radius, 2);
+        Console.WriteLine($"Ringi pindala on {area:F2}");
     }
 
-    public void ArvutaPindala() {
-        double pindala = Math.PI * _raadius * _raadius;
-        Console.WriteLine($"ringi pindala:{Math.Round(pindala, 2)}");
-    }
-
-    public void ArvutaÜmbermõõt() {
-        double ümbermõõt = 2 * Math.PI * _raadius;
-        Console.WriteLine($"ringi ümbermõõt:{Math.Round(ümbermõõt, 2)}");
+    public void CalculateCircumference()
+    {
+        double circumference = 2 * Math.PI * _radius;
+        Console.WriteLine($"Ringi ümbemõõt on {circumference:F2}");
     }
 }
