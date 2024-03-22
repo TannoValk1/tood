@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "EFo4F2juOGsGQQ1zFJFVHHKHgXZ5RBtXG0gr0u9EDKyK6dL0p+cwGaoBxyTDfnurby8QmTene8G6v31k7dbasA==",
+  "dgSpecHash": "znx8O0CkhNHrh2M55KRaPiDnK5Muo9Pb0qkGN2P44fmrNN92Y/QXGq+GV+lXsBG6dtUr0JoJZJyNhuKZOb+CbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\opilane\\source\\repos\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_1\\Nadal7_HW_1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\tanno\\tood\\HomeWork\\Nadal7_HW\\Nadal7_HW\\Nadal7_HW_1\\Nadal7_HW_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tanno\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\tanno\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\tanno\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\tanno\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

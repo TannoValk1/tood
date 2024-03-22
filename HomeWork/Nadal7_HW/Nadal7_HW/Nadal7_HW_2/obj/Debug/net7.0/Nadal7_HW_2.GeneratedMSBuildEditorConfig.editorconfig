@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Nadal7_HW_2
-build_property.ProjectDir = C:\Users\opilane\source\repos\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\
+build_property.ProjectDir = C:\Users\tanno\tood\HomeWork\Nadal7_HW\Nadal7_HW\Nadal7_HW_2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
