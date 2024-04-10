@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nadal7_HW_2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec3ffe72135cdbbaaf0dd5602a38e2fab47922ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c6e706c0b8b1fd4dc97d52d09466c7a2a317a61")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nadal7_HW_2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nadal7_HW_2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
