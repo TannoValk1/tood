@@ -23,10 +23,10 @@ namespace homework_w14_2
             List<string> listforaccidents = new List<string>();
             List<string> listforDeaths = new List<string>();
 
-            // 1999_acitents_Deaths
+
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\1999_accidents_Deaths.txt"))
             {
-                Console.WriteLine($"Deaths % in 1999");
+                Console.WriteLine($"Death % in 1999");
                 string line;
                 double deathCount = 0;
                 double p = 0;
@@ -57,11 +57,10 @@ namespace homework_w14_2
                     index++;
                 }
                 Console.WriteLine();
-                Console.WriteLine($"All deaths is: {deathCount}");
-                Console.WriteLine($"Averge pros is : {avergepros}%");
+                Console.WriteLine($"All deaths: {deathCount}");
+                Console.WriteLine($"Averge pros: {avergepros}%");
             }
 
-            // 1999_accidents
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\1999_accidents.txt"))
             {
                 string line;
@@ -79,11 +78,10 @@ namespace homework_w14_2
                 Console.WriteLine($"1999: {Counts} accidents");
             }
 
-            // 2009_acitents_Deaths
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\2009_accidents_Deaths.txt"))
             {
                 Console.WriteLine();
-                Console.WriteLine($"Deaths % in 2009");
+                Console.WriteLine($"Death % in 2009");
                 string line;
                 double deathCount = 0;
                 double p = 0;
@@ -114,11 +112,10 @@ namespace homework_w14_2
                     index++;
                 }
                 Console.WriteLine();
-                Console.WriteLine($"All deaths is: {deathCount}");
-                Console.WriteLine($"Averge pros is : {avergepros}%");
+                Console.WriteLine($"All deaths: {deathCount}");
+                Console.WriteLine($"Averge pros: {avergepros}%");
             }
 
-            // 2009_accidents
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\2009_accidents.txt"))
             {
                 string line;
@@ -136,11 +133,10 @@ namespace homework_w14_2
                 Console.WriteLine($"2009: {Counts} accidents");
             }
 
-            // 2019_acitents_Deaths
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\2019_accidents_Deaths.txt"))
             {
                 Console.WriteLine();
-                Console.WriteLine($"Deaths % in 2019");
+                Console.WriteLine($"Death % in 2019");
                 string line;
                 double deathCount = 0;
                 double p = 0;
@@ -171,11 +167,10 @@ namespace homework_w14_2
                     index++;
                 }
                 Console.WriteLine();
-                Console.WriteLine($"All deaths is: {deathCount}");
-                Console.WriteLine($"Averge pros is : {avergepros}%");
+                Console.WriteLine($"All deaths: {deathCount}");
+                Console.WriteLine($"Averge pros: {avergepros}%");
             }
 
-            // 2019_accidents
             using (StreamReader reader = new StreamReader("C:\\Users\\tanno\\Downloads\\TARpe23ProgNädal14TaskZip\\2019_accidents.txt"))
             {
                 string line;
@@ -194,7 +189,6 @@ namespace homework_w14_2
                 Console.WriteLine();
                 var maxDeaths = deathsByMonth.OrderByDescending(kv => kv.Value).First();
 
-                // Highlight the month with the most deaths
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Month with most deaths: {maxDeaths.Key}, Deaths: {maxDeaths.Value}");
                 Console.ResetColor();
@@ -204,7 +198,6 @@ namespace homework_w14_2
                 Console.WriteLine("Accidents by year (decreasing order):");
                 foreach (var kvp in sortedAccidents)
                 {
-                    // Highlight the year and the number of accidents
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"{kvp.Key}: {kvp.Value} accidents");
                     Console.ResetColor();
